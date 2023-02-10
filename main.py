@@ -63,7 +63,7 @@ def read_data_from_stdin():
 # save header and data_list to the csv_file
 def write_data_to_csv_file(header, data_list, file):
     with open(file, 'w', encoding='utf-8', newline='') as csv_file:
-        writer = csv.DictWriter(csv_file, fieldnames=header, dialect='excel')
+        writer = csv.DictWriter(csv_file, fieldnames=header)
         writer.writeheader()
         writer.writerows(data_list)
 
