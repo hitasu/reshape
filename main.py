@@ -98,9 +98,9 @@ def output_result(dest_file):
 
 
 if __name__ == '__main__':
-    # 接收输入的批量原始数据
+    # 接收批量输入的原始数据
     headers, data = read_data_from_stdin()
-    # 批量原始数据存入 CSV_TABLE_INPUT文件
+    # 将原始数据存入 CSV_TABLE_INPUT文件
     write_data_to_csv_file(headers, data, CSV_TABLE_STDIN)
     # 只读 CSV_TABLE_INPUT文件的数据转换格式后另存为 CSV_TABLE_RESULT文件并输出结果.
     reshape_data(CSV_TABLE_STDIN, CSV_TABLE_RESULT)
